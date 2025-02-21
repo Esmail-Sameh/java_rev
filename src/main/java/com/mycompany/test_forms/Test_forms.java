@@ -13,18 +13,10 @@ public class Test_forms {
 //        create_message_box_with_name frm = new create_message_box_with_name();
 //        SimpleCalc calc = new SimpleCalc();
 //        CalcDateOfBirth db = new CalcDateOfBirth();
-//        db.setVisible(true);
-//        db.setLocationRelativeTo(null);
-        try{
-        PrintWriter w = new PrintWriter("Names.txt");
-        w.println("Esmail");
-        w.println("Ahmed");
-        w.println("Temer");
-        w.println("Mazen");
-        w.close();
-        }catch(FileNotFoundException ex){
-            JOptionPane.showMessageDialog(null, ex);
-        }
+        SaveEmpData sed = new SaveEmpData();
+        sed.setVisible(true);
+        sed.setLocationRelativeTo(null);
+  
 
     }
 }
