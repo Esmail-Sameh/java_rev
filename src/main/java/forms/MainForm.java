@@ -19,6 +19,7 @@ public class MainForm extends javax.swing.JFrame {
         btnMessageBoxWithName = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         btnSound = new javax.swing.JButton();
+        btnRunVideo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,6 +70,13 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
+        btnRunVideo.setText("Run video");
+        btnRunVideo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRunVideoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -85,7 +93,8 @@ public class MainForm extends javax.swing.JFrame {
                             .addComponent(btnCalcDB, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnSimpleCalc, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnMessageBoxWithName, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSound, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnSound, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnRunVideo, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jButton5)))
@@ -106,7 +115,9 @@ public class MainForm extends javax.swing.JFrame {
                 .addComponent(btnMessageBoxWithName)
                 .addGap(18, 18, 18)
                 .addComponent(btnSound)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(btnRunVideo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addComponent(jButton5)
                 .addContainerGap())
         );
@@ -154,6 +165,13 @@ public class MainForm extends javax.swing.JFrame {
         ds.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_btnSoundActionPerformed
 
+    private void btnRunVideoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRunVideoActionPerformed
+        RunVideo rv = new RunVideo();
+        rv.setVisible(true);
+        rv.setLocationRelativeTo(null);
+        rv.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_btnRunVideoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -192,6 +210,7 @@ public class MainForm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCalcDB;
     private javax.swing.JButton btnMessageBoxWithName;
+    private javax.swing.JButton btnRunVideo;
     private javax.swing.JButton btnSaveEmpData;
     private javax.swing.JButton btnSimpleCalc;
     private javax.swing.JButton btnSound;

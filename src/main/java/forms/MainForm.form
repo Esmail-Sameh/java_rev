@@ -37,6 +37,7 @@
                           <Component id="btnSimpleCalc" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
                           <Component id="btnMessageBoxWithName" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
                           <Component id="btnSound" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
+                          <Component id="btnRunVideo" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -63,7 +64,9 @@
               <Component id="btnMessageBoxWithName" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnSound" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="75" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnRunVideo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="58" max="32767" attributes="0"/>
               <Component id="jButton5" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -129,6 +132,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSoundActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnRunVideo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Run video"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRunVideoActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
