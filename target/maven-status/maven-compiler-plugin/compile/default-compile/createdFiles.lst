@@ -1,4 +1,3 @@
-com\mycompany\test_forms\CreatFile.class
 forms\SaveEmpData.class
 forms\MainForm$5.class
 forms\SaveEmpData$2.class
@@ -9,8 +8,10 @@ forms\create_message_box_with_name$2.class
 forms\MainForm$7.class
 forms\MainForm$2.class
 forms\SimpleCalc$5.class
+forms\RunHtmlFile$1.class
 forms\DisplaySound.class
 forms\SimpleCalc$4.class
+forms\MainForm$9.class
 forms\SimpleCalc$2.class
 forms\SaveEmpData$1.class
 forms\SimpleCalc$7.class
@@ -22,6 +23,7 @@ forms\MainForm.class
 forms\RunVideo$1.class
 com\mycompany\test_forms\Test_forms.class
 forms\create_message_box_with_name.class
+forms\RunHtmlFile$2.class
 forms\SimpleCalc$8.class
 forms\MainForm$1.class
 forms\SaveEmpData$3.class
@@ -30,7 +32,9 @@ forms\create_message_box_with_name$1.class
 forms\MainForm$3.class
 forms\SimpleCalc$6.class
 forms\MainForm$8.class
+forms\RunHtmlFile.class
 forms\SimpleCalc$3.class
+com\mycompany\test_forms\MyToolrs.class
 forms\CalcDateOfBirth$1.class
 forms\CalcDateOfBirth.class
 forms\DisplaySound$1.class

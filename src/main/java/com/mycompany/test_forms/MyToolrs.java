@@ -3,9 +3,11 @@ package com.mycompany.test_forms;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.WindowConstants;
 
-public class CreatFile {
+public class MyToolrs {
 
    
     void createFile(){
@@ -20,6 +22,12 @@ public class CreatFile {
             JOptionPane.showMessageDialog(null, ex);
         }
         
+    }
+    
+    public static void runForm(JFrame frm) {
+        frm.setVisible(true);
+        frm.setLocationRelativeTo(null);
+        frm.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
     
 }

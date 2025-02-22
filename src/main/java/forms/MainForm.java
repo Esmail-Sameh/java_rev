@@ -1,6 +1,8 @@
 
 package forms;
 
+import com.mycompany.test_forms.MyToolrs;
+
 public class MainForm extends javax.swing.JFrame {
 
     public MainForm() {
@@ -20,6 +22,7 @@ public class MainForm extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         btnSound = new javax.swing.JButton();
         btnRunVideo = new javax.swing.JButton();
+        btnRunHtmlFile = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,6 +80,13 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
+        btnRunHtmlFile.setText("Run Html File");
+        btnRunHtmlFile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRunHtmlFileActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -87,25 +97,26 @@ public class MainForm extends javax.swing.JFrame {
                         .addGap(149, 149, 149)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(87, 87, 87)
+                        .addContainerGap()
+                        .addComponent(jButton5))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(86, 86, 86)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnSaveEmpData, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnCalcDB, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnSimpleCalc, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnMessageBoxWithName, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnSound, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnRunVideo, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton5)))
-                .addContainerGap(93, Short.MAX_VALUE))
+                            .addComponent(btnRunVideo, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnRunHtmlFile, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(45, 45, 45)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addComponent(btnCalcDB)
                 .addGap(18, 18, 18)
                 .addComponent(btnSaveEmpData)
@@ -117,7 +128,9 @@ public class MainForm extends javax.swing.JFrame {
                 .addComponent(btnSound)
                 .addGap(18, 18, 18)
                 .addComponent(btnRunVideo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(btnRunHtmlFile)
+                .addGap(25, 25, 25)
                 .addComponent(jButton5)
                 .addContainerGap())
         );
@@ -130,47 +143,33 @@ public class MainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void btnCalcDBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcDBActionPerformed
-        CalcDateOfBirth frmcalc = new CalcDateOfBirth();
-        frmcalc.setVisible(true);
-        frmcalc.setLocationRelativeTo(null);
-        frmcalc.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        MyToolrs.runForm(new CalcDateOfBirth()); 
     }//GEN-LAST:event_btnCalcDBActionPerformed
 
     private void btnSaveEmpDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveEmpDataActionPerformed
-        SaveEmpData sed = new SaveEmpData();
-        sed.setVisible(true);
-        sed.setLocationRelativeTo(null);
-        sed.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        MyToolrs.runForm(new SaveEmpData());
     }//GEN-LAST:event_btnSaveEmpDataActionPerformed
 
     private void btnSimpleCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpleCalcActionPerformed
-        SimpleCalc sc = new SimpleCalc();
-        sc.setVisible(true);
-        sc.setLocationRelativeTo(null);
-        sc.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        MyToolrs.runForm(new SimpleCalc());
     }//GEN-LAST:event_btnSimpleCalcActionPerformed
 
     private void btnMessageBoxWithNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMessageBoxWithNameActionPerformed
-        create_message_box_with_name cmbwn = new create_message_box_with_name();
-        cmbwn.setVisible(true);
-        cmbwn.setLocationRelativeTo(null);
-        cmbwn.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        MyToolrs.runForm(new create_message_box_with_name());
         
     }//GEN-LAST:event_btnMessageBoxWithNameActionPerformed
 
     private void btnSoundActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSoundActionPerformed
-        DisplaySound ds = new DisplaySound();
-        ds.setVisible(true);
-        ds.setLocationRelativeTo(null);
-        ds.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        MyToolrs.runForm(new DisplaySound());
     }//GEN-LAST:event_btnSoundActionPerformed
 
     private void btnRunVideoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRunVideoActionPerformed
-        RunVideo rv = new RunVideo();
-        rv.setVisible(true);
-        rv.setLocationRelativeTo(null);
-        rv.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        MyToolrs.runForm(new RunVideo());
     }//GEN-LAST:event_btnRunVideoActionPerformed
+
+    private void btnRunHtmlFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRunHtmlFileActionPerformed
+        MyToolrs.runForm(new RunHtmlFile());
+    }//GEN-LAST:event_btnRunHtmlFileActionPerformed
 
     /**
      * @param args the command line arguments
@@ -210,6 +209,7 @@ public class MainForm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCalcDB;
     private javax.swing.JButton btnMessageBoxWithName;
+    private javax.swing.JButton btnRunHtmlFile;
     private javax.swing.JButton btnRunVideo;
     private javax.swing.JButton btnSaveEmpData;
     private javax.swing.JButton btnSimpleCalc;
