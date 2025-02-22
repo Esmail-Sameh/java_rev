@@ -23,6 +23,7 @@ public class MainForm extends javax.swing.JFrame {
         btnSound = new javax.swing.JButton();
         btnRunVideo = new javax.swing.JButton();
         btnRunHtmlFile = new javax.swing.JButton();
+        btnChooseFile = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -87,6 +88,13 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
+        btnChooseFile.setText("Choose File");
+        btnChooseFile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnChooseFileActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -100,7 +108,7 @@ public class MainForm extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jButton5))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(86, 86, 86)
+                        .addGap(87, 87, 87)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnSaveEmpData, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnCalcDB, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -108,15 +116,16 @@ public class MainForm extends javax.swing.JFrame {
                             .addComponent(btnMessageBoxWithName, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnSound, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnRunVideo, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnRunHtmlFile, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(94, Short.MAX_VALUE))
+                            .addComponent(btnRunHtmlFile, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnChooseFile, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(btnCalcDB)
                 .addGap(18, 18, 18)
                 .addComponent(btnSaveEmpData)
@@ -130,7 +139,9 @@ public class MainForm extends javax.swing.JFrame {
                 .addComponent(btnRunVideo)
                 .addGap(18, 18, 18)
                 .addComponent(btnRunHtmlFile)
-                .addGap(25, 25, 25)
+                .addGap(18, 18, 18)
+                .addComponent(btnChooseFile)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(jButton5)
                 .addContainerGap())
         );
@@ -171,6 +182,10 @@ public class MainForm extends javax.swing.JFrame {
         MyToolrs.runForm(new RunHtmlFile());
     }//GEN-LAST:event_btnRunHtmlFileActionPerformed
 
+    private void btnChooseFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChooseFileActionPerformed
+        MyToolrs.runForm(new ChooseFile());
+    }//GEN-LAST:event_btnChooseFileActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -208,6 +223,7 @@ public class MainForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCalcDB;
+    private javax.swing.JButton btnChooseFile;
     private javax.swing.JButton btnMessageBoxWithName;
     private javax.swing.JButton btnRunHtmlFile;
     private javax.swing.JButton btnRunVideo;
