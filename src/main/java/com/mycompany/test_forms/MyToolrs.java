@@ -8,7 +8,13 @@ import javax.swing.JOptionPane;
 import javax.swing.WindowConstants;
 
 public class MyToolrs {
-
+    String text;
+    
+    public MyToolrs(){}
+    
+    public MyToolrs(String text){
+        this.text = text;
+    }
    
     void createFile(){
         try{
@@ -30,4 +36,22 @@ public class MyToolrs {
         frm.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
     
+    public void  print_Char_By_Char(){
+        for(char c : text.toCharArray()){
+            System.out.println(c);
+        }
+    }
+    
+    public void word_Count(String text){
+        int count = 1;
+        String trim = text.trim();
+        for(char c : trim.toCharArray()){
+            if(c == ' '){
+                count += 1;
+            }
+        }
+        System.out.println("Total word is: " + count );
+    }
+    
 }
+ 
