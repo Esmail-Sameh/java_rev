@@ -2,6 +2,12 @@
 package forms;
 
 import com.mycompany.test_forms.MyToolrs;
+import java.awt.Image;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.JOptionPane;
 
 public class MainForm extends javax.swing.JFrame {
 
@@ -24,17 +30,31 @@ public class MainForm extends javax.swing.JFrame {
         btnRunVideo = new javax.swing.JButton();
         btnRunHtmlFile = new javax.swing.JButton();
         btnChooseFile = new javax.swing.JButton();
+        btnJTable = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 25)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Main Form");
 
         btnCalcDB.setText("Calc date of birth");
+        btnCalcDB.setToolTipText("");
+        btnCalcDB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCalcDB.setName(""); // NOI18N
         btnCalcDB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCalcDBActionPerformed(evt);
+            }
+        });
+        btnCalcDB.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                btnCalcDBPropertyChange(evt);
             }
         });
 
@@ -95,6 +115,13 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
+        btnJTable.setText("J Table");
+        btnJTable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJTableActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -117,7 +144,8 @@ public class MainForm extends javax.swing.JFrame {
                             .addComponent(btnSound, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnRunVideo, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnRunHtmlFile, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnChooseFile, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btnChooseFile, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnJTable, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(93, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -141,7 +169,9 @@ public class MainForm extends javax.swing.JFrame {
                 .addComponent(btnRunHtmlFile)
                 .addGap(18, 18, 18)
                 .addComponent(btnChooseFile)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(btnJTable)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addComponent(jButton5)
                 .addContainerGap())
         );
@@ -186,6 +216,26 @@ public class MainForm extends javax.swing.JFrame {
         MyToolrs.runForm(new ChooseFile());
     }//GEN-LAST:event_btnChooseFileActionPerformed
 
+    private void btnJTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJTableActionPerformed
+        MyToolrs.runForm(new Table());
+    }//GEN-LAST:event_btnJTableActionPerformed
+
+    private void btnCalcDBPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_btnCalcDBPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCalcDBPropertyChange
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        try {
+            // TODO add your handling code here:
+            Image img = ImageIO.read(getClass().getResource("image.png"));
+            System.out.println(img);
+            this.setIconImage(img);
+            this.setLocationRelativeTo(null);
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null ,ex.getMessage());
+        }
+    }//GEN-LAST:event_formWindowOpened
+
     /**
      * @param args the command line arguments
      */
@@ -224,6 +274,7 @@ public class MainForm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCalcDB;
     private javax.swing.JButton btnChooseFile;
+    private javax.swing.JButton btnJTable;
     private javax.swing.JButton btnMessageBoxWithName;
     private javax.swing.JButton btnRunHtmlFile;
     private javax.swing.JButton btnRunVideo;
